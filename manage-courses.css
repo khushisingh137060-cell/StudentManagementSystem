@@ -1,0 +1,411 @@
+/* =========================================================
+   MANAGE-COURSES - PAGE CSS
+   ========================================================= */
+
+:root {
+    --purple: #6366f1;
+    --purple-dark: #4f46e5;
+    --violet: #8b5cf6;
+    --pink: #ec4899;
+    --blue: #3b82f6;
+    --cyan: #06b6d4;
+    --green: #10b981;
+    --orange: #f59e0b;
+    --red: #ef4444;
+
+    --dark: #151a35;
+    --dark-light: #242b4a;
+
+    --text: #252b42;
+    --muted: #737b91;
+
+    --background: #f3f5ff;
+    --white: #ffffff;
+    --border: #e3e6f2;
+
+    --shadow: 0 10px 30px rgba(55, 65, 120, 0.12);
+    --radius: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: white;
+    font-size: 25px;
+
+    background: linear-gradient(
+        135deg,
+        var(--purple),
+        var(--pink)
+    );
+}
+
+/* =========================================================
+   DASHBOARD LAYOUT
+   ========================================================= */
+
+.dashboard-layout {
+    min-height: 100vh;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    width: 255px;
+    min-height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    padding: 22px 16px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151936 0%,
+            #272052 55%,
+            #40205e 100%
+        );
+
+    box-shadow:
+        5px 0 25px rgba(20, 20, 60, 0.18);
+
+    z-index: 100;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 8px 12px 28px;
+}
+
+.sidebar-logo .logo-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.sidebar-logo h2 {
+    font-size: 19px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 7px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    color: #d7d9ea;
+
+    transition: 0.25s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(99, 102, 241, 0.95),
+            rgba(139, 92, 246, 0.75)
+        );
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.18);
+}
+
+.sidebar-menu .icon {
+    width: 22px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+    width: calc(100% - 255px);
+    margin-left: 255px;
+
+    min-height: 100vh;
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.topbar {
+    height: 75px;
+
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar h3 {
+    font-size: 21px;
+}
+
+.page-content {
+    padding: 30px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    margin-bottom: 28px;
+
+    padding: 34px;
+
+    color: white;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(79, 70, 229, 0.94),
+            rgba(219, 39, 119, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=80")
+        center/cover;
+
+    box-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-size: 31px;
+    margin-bottom: 6px;
+}
+
+.hero p {
+    opacity: 0.9;
+}
+
+/* =========================================================
+   ADMIN HERO
+   ========================================================= */
+
+.admin-hero {
+    background:
+        linear-gradient(
+            110deg,
+            rgba(15, 23, 42, 0.95),
+            rgba(79, 70, 229, 0.84)
+        ),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80")
+        center/cover;
+}
+
+/* =========================================================
+   COURSE GRID
+   ========================================================= */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.course-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+}
+
+.course-image {
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+}
+
+.course-body {
+    padding: 20px;
+}
+
+.course-body h3 {
+    margin-bottom: 6px;
+}
+
+.course-body p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.course-tag {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    color: #5549ba;
+
+    background: #eeedff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .sidebar {
+        width: 75px;
+        padding: 20px 10px;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+    }
+
+    .sidebar-logo h2 {
+        display: none;
+    }
+
+    .sidebar-menu a {
+        justify-content: center;
+        padding: 13px;
+    }
+
+    .sidebar-menu a span:not(.icon) {
+        display: none;
+    }
+
+    .main-content {
+        width: calc(100% - 75px);
+        margin-left: 75px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+
+    .admin-form {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form .full {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .stats-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .topbar h3 {
+        font-size: 17px;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .login-content {
+        padding: 40px 25px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,189 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Attendance</title>
+    <link rel="stylesheet" href="manage-attendance.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">🛠️</div>
+            <h2>EduManage</h2>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="students.html">
+                    <span class="icon">👨‍🎓</span>
+                    <span>Students</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="manage-courses.html">
+                    <span class="icon">📚</span>
+                    <span>Courses</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="manage-attendance.html" class="active">
+                    <span class="icon">📅</span>
+                    <span>Attendance</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="results.html">
+                    <span class="icon">📝</span>
+                    <span>Results</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin-login.html">
+                    <span class="icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h3>Attendance Management</h3>
+        </header>
+
+        <section class="page-content">
+
+            <div class="hero admin-hero">
+                <h1>Attendance Management 📅</h1>
+                <p>Monitor student attendance records.</p>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon icon-green">✓</div>
+                    <h2>86%</h2>
+                    <p>Average Attendance</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon icon-blue">👨‍🎓</div>
+                    <h2>1,250</h2>
+                    <p>Students</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon icon-orange">⚠</div>
+                    <h2>84</h2>
+                    <p>Low Attendance</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon icon-purple">📚</div>
+                    <h2>32</h2>
+                    <p>Courses</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">
+                    <h3>Attendance Records</h3>
+
+                    <button class="btn btn-primary">
+                        + Add Attendance
+                    </button>
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table class="data-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Course</th>
+                                <th>Attendance</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>STU1001</td>
+                                <td>Rahul Sharma</td>
+                                <td>Java Programming</td>
+                                <td>90%</td>
+                                <td>
+                                    <span class="badge badge-success">
+                                        Good
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>STU1002</td>
+                                <td>Priya Patel</td>
+                                <td>DBMS</td>
+                                <td>87%</td>
+                                <td>
+                                    <span class="badge badge-success">
+                                        Good
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>STU1003</td>
+                                <td>Aman Shah</td>
+                                <td>Mathematics</td>
+                                <td>68%</td>
+                                <td>
+                                    <span class="badge badge-danger">
+                                        Low
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+```

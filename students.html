@@ -1,0 +1,195 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="students.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">🛠️</div>
+            <h2>EduManage</h2>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="students.html" class="active">
+                    <span class="icon">👨‍🎓</span>
+                    <span>Students</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="manage-courses.html">
+                    <span class="icon">📚</span>
+                    <span>Courses</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="manage-attendance.html">
+                    <span class="icon">📅</span>
+                    <span>Attendance</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="results.html">
+                    <span class="icon">📝</span>
+                    <span>Results</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin-login.html">
+                    <span class="icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h3>Manage Students</h3>
+        </header>
+
+        <section class="page-content">
+
+            <div class="hero admin-hero">
+                <h1>Student Management 👨‍🎓</h1>
+                <p>Add, view and manage student records.</p>
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h3>Student Records</h3>
+
+                    <button class="btn btn-primary">
+                        + Add Student
+                    </button>
+
+                </div>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Search student...">
+
+                    <button class="btn btn-primary">
+                        Search
+                    </button>
+
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table class="data-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Course</th>
+                                <th>Semester</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>STU1001</td>
+                                <td>Rahul Sharma</td>
+                                <td>rahul@example.com</td>
+                                <td>B.Tech CE</td>
+                                <td>2</td>
+                                <td>
+                                    <span class="badge badge-success">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-secondary">
+                                        Edit
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>STU1002</td>
+                                <td>Priya Patel</td>
+                                <td>priya@example.com</td>
+                                <td>B.Tech IT</td>
+                                <td>2</td>
+                                <td>
+                                    <span class="badge badge-success">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-secondary">
+                                        Edit
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>STU1003</td>
+                                <td>Aman Shah</td>
+                                <td>aman@example.com</td>
+                                <td>B.Tech CE</td>
+                                <td>2</td>
+                                <td>
+                                    <span class="badge badge-warning">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-secondary">
+                                        Edit
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+```

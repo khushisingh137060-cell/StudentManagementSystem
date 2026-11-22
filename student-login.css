@@ -1,0 +1,336 @@
+/* =========================================================
+   STUDENT-LOGIN - PAGE CSS
+   ========================================================= */
+
+:root {
+    --purple: #6366f1;
+    --purple-dark: #4f46e5;
+    --violet: #8b5cf6;
+    --pink: #ec4899;
+    --blue: #3b82f6;
+    --cyan: #06b6d4;
+    --green: #10b981;
+    --orange: #f59e0b;
+    --red: #ef4444;
+
+    --dark: #151a35;
+    --dark-light: #242b4a;
+
+    --text: #252b42;
+    --muted: #737b91;
+
+    --background: #f3f5ff;
+    --white: #ffffff;
+    --border: #e3e6f2;
+
+    --shadow: 0 10px 30px rgba(55, 65, 120, 0.12);
+    --radius: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+.login-page {
+    min-height: 100vh;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(49, 46, 129, 0.94),
+            rgba(126, 34, 206, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 600px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 28px;
+    overflow: hidden;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.login-image {
+    padding: 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30, 27, 75, 0.88),
+            rgba(99, 102, 241, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80")
+        center/cover;
+}
+
+.login-image h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.login-image p {
+    max-width: 430px;
+    font-size: 17px;
+    color: #eeeeff;
+}
+
+.login-content {
+    padding: 60px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: white;
+    font-size: 25px;
+
+    background: linear-gradient(
+        135deg,
+        var(--purple),
+        var(--pink)
+    );
+}
+
+.login-content h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 2px solid var(--border);
+    border-radius: 12px;
+
+    background: #f9faff;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--purple);
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.10);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    border: none;
+    cursor: pointer;
+
+    padding: 13px 22px;
+    border-radius: 12px;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    display: inline-block;
+
+    transition: 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--violet)
+        );
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.sidebar-logo .logo-icon {
+    width: 45px;
+    height: 45px;
+}
+
+@media (max-width: 800px) {
+
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .sidebar {
+        width: 75px;
+        padding: 20px 10px;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+    }
+
+    .sidebar-logo h2 {
+        display: none;
+    }
+
+    .sidebar-menu a {
+        justify-content: center;
+        padding: 13px;
+    }
+
+    .sidebar-menu a span:not(.icon) {
+        display: none;
+    }
+
+    .main-content {
+        width: calc(100% - 75px);
+        margin-left: 75px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+
+    .admin-form {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form .full {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .stats-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .topbar h3 {
+        font-size: 17px;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .login-content {
+        padding: 40px 25px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+}
